@@ -12,8 +12,8 @@ sonar = adafruit_hcsr04.HCSR04(trigger_pin = board.GP15, echo_pin = board.GP14)
 
 
 # variables
-#seconds_to_microseconds_conversion_number = 1000000
-#sonar_delays = [2 / seconds_to_microseconds_conversion_number, 10 / seconds_to_microseconds_conversion_number]
+seconds_to_microseconds_conversion_number = 1000000
+sonar_delays = [2 / seconds_to_microseconds_conversion_number, 10 / seconds_to_microseconds_conversion_number]
 distance = 0
 
 # setup
@@ -22,15 +22,15 @@ led.direction = digitalio.Direction.OUTPUT
 
 # loop
 while True:
-    ## Sonar gets the disatnec form object
-    #sleep(sonar_delays[0])
-    #distance = sonar.distance
-    #sleep(sonar_delays[1])
+    # Sonar gets the disatance form object
+    time.sleep(sonar_delays[0])
+    distance = sonar.distance
+    time.sleep(sonar_delays[1])
 
     print(f"Distance: {distance} cm")
 
     # turns on LED  an object distance is equal to or closer then 20 cm from the sonar
     if distance <= 20:
-        led.value(True)
+        led.value = True
     else:
-        led.value(False)
+        led.value = False
