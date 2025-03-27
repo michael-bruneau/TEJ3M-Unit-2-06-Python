@@ -7,13 +7,14 @@
 import time
 import board
 import adafruit_hcsr04
-sonar = adafruit_hcsr04.HCSR04(trigger_pin=board.GP15, echo_pin=board.GP14)
+import digitalio
+sonar = adafruit_hcsr04.HCSR04(trigger_pin = board.GP15, echo_pin = board.GP14)
 
 
 # variables
-seconds_to_microseconds_conversion_number = 1000000
-sonar_delays = [2 / seconds_to_microseconds_conversion_number, 10 / seconds_to_microseconds_conversion_number]
-distance = null
+#seconds_to_microseconds_conversion_number = 1000000
+#sonar_delays = [2 / seconds_to_microseconds_conversion_number, 10 / seconds_to_microseconds_conversion_number]
+distance = 0
 
 # setup
 led = digitalio.DigitalInOut(board.GP12)
@@ -21,10 +22,10 @@ led.direction = digitalio.Direction.OUTPUT
 
 # loop
 while True:
-    # Sonar gets the disatnec form object
-    sonar_delays[0]
-    distance = sonar.distance
-    sonar_delays[1]
+    ## Sonar gets the disatnec form object
+    #sleep(sonar_delays[0])
+    #distance = sonar.distance
+    #sleep(sonar_delays[1])
 
     print(f"Distance: {distance} cm")
 
