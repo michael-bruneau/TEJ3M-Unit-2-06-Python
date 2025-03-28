@@ -13,7 +13,7 @@ import digitalio
 # variables
 seconds_to_microseconds_conversion_number = 1000000
 sonar_delays = [2 / seconds_to_microseconds_conversion_number, 10 / seconds_to_microseconds_conversion_number]
-delay_between_sonar_cheeks = 5
+delay_between_sonar_cheeks = 10
 distance = 0
 
 # setup
@@ -36,5 +36,5 @@ while True:
     else:
         led.value = False
 
-    # This is to egt it to work sorry
-    #time.sleep(delay_between_sonar_cheeks)
+    # This is to get it to work sorry
+    time.sleep(delay_between_sonar_cheeks)
