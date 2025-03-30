@@ -31,7 +31,7 @@ while True:
 
     print(f"Distance: {distance} cm")
 
-    # turns on LED  an object distance is equal to or closer then 20 cm from the sonar make 20 a cosntant and comment on  the working timer
+    # Turns on LED if an object’s distance is equal to or closer then 20 cm from the sonar
     if distance <= too_close0:
         led.value = True
     else:
