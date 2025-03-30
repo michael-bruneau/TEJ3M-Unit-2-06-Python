@@ -1,7 +1,7 @@
 # Created by: Michael Bruneau
 # Created on: March 2025
 #
-# This module is a Raspberrypy Pico program causes micro Servo to to turn back and forth from 180 degress to 0 degrees
+# This module is a Raspberrypy Pico program displays distance from sonar and truns on LED if an object gets to close to the sonar
 
 
 import time
@@ -15,6 +15,7 @@ seconds_to_microseconds_conversion_number = 1000000
 sonar_delays = [2 / seconds_to_microseconds_conversion_number, 10 / seconds_to_microseconds_conversion_number]
 delay_between_sonar_cheeks = 10
 distance = 0
+too_close = 20
 
 # setup
 led = digitalio.DigitalInOut(board.GP12)
@@ -31,10 +32,10 @@ while True:
     print(f"Distance: {distance} cm")
 
     # turns on LED  an object distance is equal to or closer then 20 cm from the sonar make 20 a cosntant and comment on  the working timer
-    if distance <= 20:
+    if distance <= too_close0:
         led.value = True
     else:
         led.value = False
 
-    # This is to get it to work sorry
-    time.sleep(delay_between_sonar_cheeks)
+    # The commented out code is not apart of the actual code but is needed to get it working by uncomenting it and recomenting it
+    #time.sleep(delay_between_sonar_cheeks)
