@@ -37,5 +37,5 @@ while True:
     else:
         led.value = False
 
-    # The commented out code is not apart of the actual code but is needed to get it working by uncomenting it and recomenting it
+    # The commented out code is not part of the actual code but is needed to get it working by uncommenting it and then recommenting it
     #time.sleep(delay_between_sonar_cheeks)
