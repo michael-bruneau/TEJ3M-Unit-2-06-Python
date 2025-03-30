@@ -24,7 +24,7 @@ sonar = adafruit_hcsr04.HCSR04(trigger_pin = board.GP15, echo_pin = board.GP14)
 
 # loop
 while True:
-    # Sonar gets the disatance form object
+    # Sonar gets the distance form object
     time.sleep(sonar_delays[0])
     distance = sonar.distance
     time.sleep(sonar_delays[1])
