@@ -1,7 +1,7 @@
 # Created by: Michael Bruneau
 # Created on: March 2025
 #
-# This module is a Raspberrypy Pico program displays distance from sonar and truns on LED if an object gets to close to the sonar
+# This module is a Raspberry Pi Pico program that displays distance from sonar and turns on an LED if an object gets too close to the sonar
 
 
 import time
